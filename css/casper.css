@@ -186,7 +186,7 @@ div.landing div.slide span:nth-child(2){
 }
 /*Services Section*/
 div.services-section div.container{
-  padding:var(--main-padding) 0;
+  padding:var(--main-padding) 0 0 0;
 }
 div.services-section div.container div.services-content{
   display: grid;
@@ -211,3 +211,62 @@ div.services-section div.container div.services-content div.card h3{
     line-height: 2;
     color:var(--main-text-color);
     }
+    /*Portfolio*/
+    div.portfolio-section{
+      padding:var(--main-padding) 0 0 0;
+    }
+    div.portfolio-content{
+      color:black;
+    }
+    div.portfolio-content ul.filter{
+
+      display:flex;
+      justify-content: center;
+      padding:0px;
+      list-style-type:none;
+    }
+    div.portfolio-content ul.filter li{
+      padding:10px;
+    }
+    div.portfolio-content ul.filter li:first-child{
+      background-color: var(--second-header-color);
+    }
+    div.portfolio-content div.gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+      
+    }
+    div.portfolio-content div.gallery div.card {
+      position:relative;
+      overflow: hidden;
+    }
+    div.portfolio-content div.gallery div.card img{
+      max-width: 100%;
+      transition: 0.3s;
+    }
+    div.portfolio-content div.gallery div.card:hover img{
+      transform: scale(1.3) rotate(10deg);
+  }
+
+    div.portfolio-content div.gallery div.card div.card-text{
+      padding:20px;
+      transition:0.3s;
+      width: 100%;    
+      background-color: white; 
+      position: absolute; 
+      bottom:-90px;
+    }
+    div.portfolio-content div.gallery div.card:hover div.card-text{
+      bottom:0px;
+    }
+
+    div.portfolio-content div.gallery div.card div.card-text h4{
+      font-weight: normal;
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+    div.portfolio-content div.gallery div.card div.card-text p{
+      color:var(--second-header-color);
+      margin: 0px;
+    }
+  
