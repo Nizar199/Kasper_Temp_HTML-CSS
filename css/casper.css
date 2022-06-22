@@ -186,7 +186,7 @@ div.landing div.slide span:nth-child(2){
 }
 /*Services Section*/
 div.services-section div.container{
-  padding:var(--main-padding) 0 0 0;
+  padding:var(--main-padding) 0;
 }
 div.services-section div.container div.services-content{
   display: grid;
@@ -212,9 +212,6 @@ div.services-section div.container div.services-content div.card h3{
     color:var(--main-text-color);
     }
     /*Portfolio*/
-    div.portfolio-section{
-      padding:var(--main-padding) 0 0 0;
-    }
     div.portfolio-content{
       color:black;
     }
@@ -230,6 +227,7 @@ div.services-section div.container div.services-content div.card h3{
     }
     div.portfolio-content ul.filter li:first-child{
       background-color: var(--second-header-color);
+      color:white;
     }
     div.portfolio-content div.gallery{
       display:grid;
@@ -268,5 +266,14 @@ div.services-section div.container div.services-content div.card h3{
     div.portfolio-content div.gallery div.card div.card-text p{
       color:var(--second-header-color);
       margin: 0px;
+    }
+    div.portfolio-content button{
+      display: block;
+      margin: 30px auto;
+      padding:15px 20px;
+      background-color: var(--second-header-color);
+      color:white;
+      text-transform:uppercase;
+      border:none;
     }
   
