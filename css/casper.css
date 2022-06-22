@@ -11,7 +11,7 @@
   --second-header-color: #19c8fa;
   --main-text-color: #777;
   --transparent-color: rgb(15, 116, 143, 70%);
-  --second-transparent: rgb(0, 0, 0, 70%);
+  --second-transparent: rgb(0, 0, 0, 60%);
 }
 body {
   font-family: "Work Sans", "sans serif";
@@ -41,44 +41,44 @@ body {
 }
 /*End*/
 /*Special Header*/
-div.special-header{
+div.special-header {
   text-align: center;
   margin-bottom: 100px;
 }
-div.special-header div.special-header-content{
-  width:50%;
-  margin:auto;
+div.special-header div.special-header-content {
+  width: 50%;
+  margin: auto;
 }
-div.special-header h1{
-  font-size:40px;
-  font-weight:normal;
+div.special-header h1 {
+  font-size: 40px;
+  font-weight: normal;
   text-transform: uppercase;
-  position:relative;
+  position: relative;
   margin-bottom: 70px;
 }
-div.special-header h1::before{
-content:'';
-width: 120px;
-height:2px;
-position:absolute;
-background-color: black;
-bottom:-30px;
-left: calc( 50% - 60px );
+div.special-header h1::before {
+  content: "";
+  width: 120px;
+  height: 2px;
+  position: absolute;
+  background-color: black;
+  bottom: -30px;
+  left: calc(50% - 60px);
 }
-div.special-header h1::after{
-  content:'';
-  width:14px;
-  height:14px;
+div.special-header h1::after {
+  content: "";
+  width: 14px;
+  height: 14px;
   background-color: white;
-  border:2px solid black;
+  border: 2px solid black;
   border-radius: 50%;
-  position:absolute;
-  bottom:-38px;
-  right:calc(50% - 7px);
+  position: absolute;
+  bottom: -38px;
+  right: calc(50% - 7px);
 }
-div.special-header p{
+div.special-header p {
   color: var(--main-text-color);
-  line-height:2;
+  line-height: 2;
   max-width: 100%;
 }
 /*Ends*/
@@ -93,7 +93,7 @@ nav div.container {
 }
 nav div.container::before {
   content: "";
-  background-color:var(--main-background-color);
+  background-color: var(--main-background-color);
   position: absolute;
   height: 1px;
   width: 100%;
@@ -115,19 +115,19 @@ nav div.container ul.links > li a {
   text-decoration: none;
   padding: 16px;
   text-transform: capitalize;
-  position:relative;
+  position: relative;
 }
 nav div.container ul.links > li a:hover {
   color: var(--second-header-color);
   border-bottom: 1px solid var(--second-header-color);
-  z-index:2;
+  z-index: 2;
 }
 nav div.container ul.links li:last-child {
-    font-size:16px;
-    color:white;
-    border-left: 1px solid var(--main-background-color);
-    cursor: pointer;
-    padding-left: 16px;
+  font-size: 16px;
+  color: white;
+  border-left: 1px solid var(--main-background-color);
+  cursor: pointer;
+  padding-left: 16px;
 }
 /*nav*/
 /*Landing*/
@@ -136,144 +136,239 @@ div.landing {
   background: url("../images/landing.jpg");
   background-size: cover;
 }
-div.calc{
-    background-color: var(--second-transparent);
-    height: 100vh;
+div.calc {
+  background-color: var(--second-transparent);
+  height: 100vh;
 }
-div.landing div.landing-content{
-  width:50%;
+div.landing div.landing-content {
+  width: 50%;
   background-color: var(--transparent-color);
-  padding:50px;
+  padding: 50px;
   position: relative;
-  top:20%;
+  top: 20%;
   display: flex;
   justify-content: flex-end;
 }
-div.landing div.landing-content div.landing-text-content{
-  width:500px;
-  color:white;
+div.landing div.landing-content div.landing-text-content {
+  width: 500px;
+  color: white;
 }
-div.landing div.landing-content div.landing-text-content h1{
-  font-size:32px;
-  font-weight:normal;
+div.landing div.landing-content div.landing-text-content h1 {
+  font-size: 32px;
+  font-weight: normal;
   line-height: 1.5;
   text-transform: capitalize;
   margin-top: 0px;
-} 
-div.landing div.landing-content div.landing-text-content p{
+}
+div.landing div.landing-content div.landing-text-content p {
   line-height: 2;
   font-size: 14px;
 }
 /*ends*/
 /*slide*/
-div.landing div.slide{
-  display:flex;
+div.landing div.slide {
+  display: flex;
   justify-content: center;
-  position:relative;
-  top:38%;
+  position: relative;
+  top: 38%;
 }
-div.landing div.slide span{
-  display:block;
-  width:20px;
-  height:20px;
+div.landing div.slide span {
+  display: block;
+  width: 20px;
+  height: 20px;
   border: 1px solid var(--main-background-color);
   border-radius: 50%;
-  margin:5px;
+  margin: 5px;
 }
-div.landing div.slide span:nth-child(2){
-  border:none;
+div.landing div.slide span:nth-child(2) {
+  border: none;
   background-color: var(--second-header-color);
 }
 /*Services Section*/
-div.services-section div.container{
-  padding:var(--main-padding) 0;
+div.services-section div.container {
+  padding: var(--main-padding) 0;
 }
-div.services-section div.container div.services-content{
+div.services-section div.container div.services-content {
   display: grid;
-grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
-gap:60px 40px;
-  
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 60px 40px;
 }
-div.services-section div.container div.services-content div.card{
-  display:flex;
+div.services-section div.container div.services-content div.card {
+  display: flex;
   justify-content: space-between;
-} 
-div.services-section div.container div.services-content div.card i{
-  margin-right: 50px;
-  font-size:50px ;
 }
-div.services-section div.container div.services-content div.card h3{
-  color:var(--second-header-color);
+div.services-section div.container div.services-content div.card i {
+  margin-right: 50px;
+  font-size: 50px;
+}
+div.services-section div.container div.services-content div.card h3 {
+  color: var(--second-header-color);
   margin-top: 0px;
   margin-bottom: 30px;
-  } 
-  div.services-section div.container div.services-content div.card p{
-    line-height: 2;
-    color:var(--main-text-color);
-    }
-    /*Portfolio*/
-    div.portfolio-content{
-      color:black;
-    }
-    div.portfolio-content ul.filter{
+}
+div.services-section div.container div.services-content div.card p {
+  line-height: 2;
+  color: var(--main-text-color);
+}
+/*design*/
+div.services-section div.design {
+  background: url("../images/design-features.jpg");
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+div.services-section div.design::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--second-transparent);
+}
+div.services-section div.design div.design-image {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+}
+div.services-section div.design .design-image img {
+  max-width: 100%;
+  position: relative;
+  bottom: -150px;
+}
+div.services-section div.design div.design-text-content {
+  padding: calc(var(--main-padding) / 2);
+  background-color: var(--transparent-color);
+  color: white;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+div.services-section div.design div.design-text-content h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+}
+div.services-section div.design div.design-text-content li {
+  list-style-type: none;
+  padding: 15px 0;
+}
+div.services-section div.design div.design-text-content li i {
+  margin-right: 20px;
+}
+/*Portfolio*/
+div.portfolio-section{
+  padding: var(--main-padding)  0;
+}
+div.portfolio-content {
+  color: black;
+}
+div.portfolio-content ul.filter {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  list-style-type: none;
+}
+div.portfolio-content ul.filter li {
+  padding: 10px;
+}
+div.portfolio-content ul.filter li:first-child {
+  background-color: var(--second-header-color);
+  color: white;
+}
+div.portfolio-content div.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+div.portfolio-content div.gallery div.card {
+  position: relative;
+  overflow: hidden;
+}
+div.portfolio-content div.gallery div.card img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+div.portfolio-content div.gallery div.card:hover img {
+  transform: scale(1.3) rotate(10deg);
+}
 
-      display:flex;
-      justify-content: center;
-      padding:0px;
-      list-style-type:none;
-    }
-    div.portfolio-content ul.filter li{
-      padding:10px;
-    }
-    div.portfolio-content ul.filter li:first-child{
-      background-color: var(--second-header-color);
-      color:white;
-    }
-    div.portfolio-content div.gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-      
-    }
-    div.portfolio-content div.gallery div.card {
-      position:relative;
-      overflow: hidden;
-    }
-    div.portfolio-content div.gallery div.card img{
-      max-width: 100%;
-      transition: 0.3s;
-    }
-    div.portfolio-content div.gallery div.card:hover img{
-      transform: scale(1.3) rotate(10deg);
-  }
+div.portfolio-content div.gallery div.card div.card-text {
+  padding: 20px;
+  transition: 0.3s;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: -90px;
+}
+div.portfolio-content div.gallery div.card:hover div.card-text {
+  bottom: 0px;
+}
 
-    div.portfolio-content div.gallery div.card div.card-text{
-      padding:20px;
-      transition:0.3s;
-      width: 100%;    
-      background-color: white; 
-      position: absolute; 
-      bottom:-90px;
-    }
-    div.portfolio-content div.gallery div.card:hover div.card-text{
-      bottom:0px;
-    }
-
-    div.portfolio-content div.gallery div.card div.card-text h4{
-      font-weight: normal;
-      margin-top: 0px;
-      margin-bottom: 10px;
-    }
-    div.portfolio-content div.gallery div.card div.card-text p{
-      color:var(--second-header-color);
-      margin: 0px;
-    }
-    div.portfolio-content button{
-      display: block;
-      margin: 30px auto;
-      padding:15px 20px;
-      background-color: var(--second-header-color);
-      color:white;
-      text-transform:uppercase;
-      border:none;
-    }
-  
+div.portfolio-content div.gallery div.card div.card-text h4 {
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+div.portfolio-content div.gallery div.card div.card-text p {
+  color: var(--second-header-color);
+  margin: 0px;
+}
+div.portfolio-content button {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 20px;
+  background-color: var(--second-header-color);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+}
+/*video*/
+div.video{
+  position:relative;
+}
+div.video::before{
+  content:'';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--second-transparent);
+}
+div.video video{
+  max-width: 100%;
+}
+div.video div.video-content{
+ background-color: var(--transparent-color);
+  color:white;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top:calc( 50% - 122px);
+  padding:calc(var(--main-padding) / 2);
+}
+div.video div.video-content h2{
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom:30px ;
+}
+div.video div.video-content p{
+  text-transform: capitalize;
+  margin-top: 0px;
+  margin-bottom:30px ;
+}
+div.video div.video-content button{
+  background-color: black;
+  color:white;
+  padding:10px 20px ;
+  border:none;
+  text-transform: uppercase;
+  margin:0px auto;
+}
+/*about us*/
+div.about-section{
+  padding: var(--main-padding) 0;
+}
