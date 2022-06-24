@@ -1,3 +1,4 @@
+/*Global Rules*/
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -46,7 +47,7 @@ div.slide {
   justify-content: center;
   position: relative;
 }
- div.slide span {
+div.slide span {
   display: block;
   width: 20px;
   height: 20px;
@@ -54,7 +55,7 @@ div.slide {
   border-radius: 50%;
   margin: 5px;
 }
- div.slide span:nth-child(2) {
+div.slide span:nth-child(2) {
   border: none;
   background-color: var(--second-header-color);
 }
@@ -100,6 +101,17 @@ div.special-header p {
   max-width: 100%;
 }
 /*Ends*/
+button.btn {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 20px;
+  background-color: var(--second-header-color);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+/*Global rules ends*/
 /*Home Section*/
 /*nav*/
 nav div.container {
@@ -127,6 +139,11 @@ nav div.container ul.links {
   justify-content: space-around;
   list-style-type: none;
   padding: 0px;
+}
+@media(max-width:660px){
+  nav div.container ul.links{
+    display: none;
+  }
 }
 nav div.container ul.links > li a {
   color: white;
@@ -167,9 +184,15 @@ div.landing div.landing-content {
   display: flex;
   justify-content: flex-end;
 }
+@media(max-width:570px){
+  div.landing div.landing-content{
+    width:100%;
+  }
+}
 div.landing div.landing-content div.landing-text-content {
   width: 500px;
   color: white;
+  
 }
 div.landing div.landing-content div.landing-text-content h1 {
   font-size: 32px;
@@ -183,7 +206,7 @@ div.landing div.landing-content div.landing-text-content p {
   font-size: 14px;
 }
 /*ends*/
-div.landing div.slide{
+div.landing div.slide {
   top: 38%;
 }
 /*Services Section*/
@@ -262,8 +285,8 @@ div.services-section div.design div.design-text-content li i {
   margin-right: 20px;
 }
 /*Portfolio*/
-div.portfolio-section{
-  padding: var(--main-padding)  0;
+div.portfolio-section {
+  padding: var(--main-padding) 0;
 }
 div.portfolio-content {
   color: black;
@@ -318,272 +341,411 @@ div.portfolio-content div.gallery div.card div.card-text p {
   color: var(--second-header-color);
   margin: 0px;
 }
-div.portfolio-content button {
-  display: block;
-  margin: 30px auto;
-  padding: 15px 20px;
-  background-color: var(--second-header-color);
-  color: white;
-  text-transform: uppercase;
-  border: none;
-}
+
 /*video*/
-div.video{
-  position:relative;
+div.video {
+  position: relative;
 }
-div.video::before{
-  content:'';
+div.video::before {
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: var(--second-transparent);
 }
-div.video video{
+div.video video {
   max-width: 100%;
 }
-div.video div.video-content{
- background-color: var(--transparent-color);
-  color:white;
+div.video div.video-content {
+  background-color: var(--transparent-color);
+  color: white;
   width: 100%;
   text-align: center;
   z-index: 2;
   position: absolute;
-  top:calc( 50% - 122px);
-  padding:calc(var(--main-padding) / 2);
+  top: calc(50% - 122px);
+  padding: calc(var(--main-padding) / 2);
 }
-div.video div.video-content h2{
+div.video div.video-content h2 {
   text-transform: uppercase;
   font-weight: normal;
   margin-top: 0px;
-  margin-bottom:30px ;
+  margin-bottom: 30px;
 }
-div.video div.video-content p{
+div.video div.video-content p {
   text-transform: capitalize;
   margin-top: 0px;
-  margin-bottom:30px ;
+  margin-bottom: 30px;
 }
-div.video div.video-content button{
+div.video div.video-content button {
   background-color: black;
-  color:white;
-  padding:10px 20px ;
-  border:none;
+  color: white;
+  padding: 10px 20px;
+  border: none;
   text-transform: uppercase;
-  margin:0px auto;
+  margin: 0px auto;
+  cursor: pointer;
 }
 /*about us*/
 
-div.about-section{
+div.about-section {
   padding: var(--main-padding) 0;
 }
-div.about-section div.container div.special-header{
+div.about-section div.container div.special-header {
   margin-bottom: 0px;
 }
-div.about-section div.container div.special-header img{
+div.about-section div.container div.special-header img {
   max-width: 100%;
   position: relative;
-  bottom:-120px;
+  bottom: -120px;
   left: -40px;
 }
 
-div.about-section div.stat{
-  background: url('../images/stats.png');
-  background-size:cover;
-  padding:var(--main-padding) 0;
+div.about-section div.stat {
+  background: url("../images/stats.png");
+  background-size: cover;
+  padding: var(--main-padding) 0;
   position: relative;
 }
-div.about-section div.stat::before{
-  content:'';
-  height:100%;
-  width:100%;
-  position:absolute;
-  top:0;
+div.about-section div.stat::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
   background-color: var(--second-transparent);
 }
-div.about-section div.stat div.container{
-  display:flex;
+div.about-section div.stat div.container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position:relative;
-  z-index:2;
+  position: relative;
+  z-index: 2;
 }
-div.about-section div.stat div.container div.card{
-  width:255px;
+div.about-section div.stat div.container div.card {
+  width: 255px;
   padding: 50px;
-  color:white;
+  color: white;
   background-color: var(--transparent-color);
   text-align: center;
 }
-div.about-section div.stat div.container div.card i{
+div.about-section div.stat div.container div.card i {
   background-color: black;
   border-radius: 50%;
-  padding:10px;
-  margin:0 auto 30px;
+  padding: 10px;
+  margin: 0 auto 30px;
 }
-div.about-section div.stat div.container div.card div.card-text-content h2{
+div.about-section div.stat div.container div.card div.card-text-content h2 {
   font-weight: 600;
-  font-size:50px ;
+  font-size: 50px;
   margin-top: 0px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
-div.about-section div.stat div.container div.card div.card-text-content p{
-  margin:0;
+div.about-section div.stat div.container div.card div.card-text-content p {
+  margin: 0;
 }
 /*more info*/
 /*testimonials*/
-div.about-section div.more-info{
+div.about-section div.more-info {
   padding: var(--main-padding) 0;
 }
-div.about-section div.more-info div.container{
+div.about-section div.more-info div.container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-div.about-section div.more-info div.container div.testimonials,div.about-section div.more-info div.container div.skills{
+div.about-section div.more-info div.container div.testimonials,
+div.about-section div.more-info div.container div.skills {
   flex-basis: 45%;
-  
 }
-@media(max-width:992px){
-  div.about-section div.more-info div.container div.testimonials,div.about-section div.more-info div.container div.skills{
+@media (max-width: 992px) {
+  div.about-section div.more-info div.container div.testimonials,
+  div.about-section div.more-info div.container div.skills {
     flex-basis: 100%;
   }
-div.about-section div.more-info div.container div.skills{
-  margin-top:60px
+  div.about-section div.more-info div.container div.skills {
+    margin-top: 60px;
+  }
 }
+div.about-section div.more-info div.container div.testimonials div.card {
+  display: flex;
 }
-div.about-section div.more-info div.container div.testimonials div.card{
-  display: flex;  
-}
-div.about-section div.more-info div.container div.header{
+div.about-section div.more-info div.container div.header {
   text-align: center;
-  color:var(--main-text-color);
+  color: var(--main-text-color);
   font-weight: normal;
   margin-bottom: 60px;
 }
-div.about-section div.more-info div.container div.header h3{
-  color:black;
+div.about-section div.more-info div.container div.header h3 {
+  color: black;
   font-weight: normal;
-  margin-top:0px;
-
+  margin-top: 0px;
 }
-div.about-section div.more-info div.container div.header p{
+div.about-section div.more-info div.container div.header p {
   line-height: 2;
-  margin:0px;
+  margin: 0px;
 }
-div.about-section div.more-info div.container div.testimonials div.card img{
-  max-width:100px;
+div.about-section div.more-info div.container div.testimonials div.card img {
+  max-width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin-right:50px;
+  margin-right: 50px;
 }
-div.about-section div.more-info div.container div.testimonials div.card div.card-text-content p{
+div.about-section
+  div.more-info
+  div.container
+  div.testimonials
+  div.card
+  div.card-text-content
+  p {
   margin: 0px;
   line-height: 1.8;
 }
-div.about-section div.more-info div.container div.testimonials div.card div.card-text-content{
+div.about-section
+  div.more-info
+  div.container
+  div.testimonials
+  div.card
+  div.card-text-content {
   border-bottom: 1px solid var(--second-header-color);
 }
-div.about-section div.more-info div.container div.testimonials div.card div.card-text-content p:last-child{
-font-size: 14px;
-text-align: right;
-color:var(--main-text-color);
-margin-top: 0px;
-margin-bottom:10px;
+div.about-section
+  div.more-info
+  div.container
+  div.testimonials
+  div.card
+  div.card-text-content
+  p:last-child {
+  font-size: 14px;
+  text-align: right;
+  color: var(--main-text-color);
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
-div.testimonials div.slide{
-  top:10%;
+div.testimonials div.slide {
+  top: 10%;
 }
 /*skills*/
-div.about-section div.more-info div.container div.skill{
-width: 100%;
+div.about-section div.more-info div.container div.skill {
+  width: 100%;
 }
-div.about-section div.more-info div.container div.skill h4{
+div.about-section div.more-info div.container div.skill h4 {
   text-transform: uppercase;
   font-weight: normal;
   margin-bottom: 15px;
 }
-div.about-section div.more-info div.container div.skill span.box-level{
+div.about-section div.more-info div.container div.skill span.box-level {
   display: block;
-width:100%;
-height:30px;
-background-color: var(--main-text-color);
+  width: 100%;
+  height: 30px;
+  background-color: var(--main-text-color);
 }
-div.about-section div.more-info div.container div.skill span.box-level span{
+div.about-section div.more-info div.container div.skill span.box-level span {
   display: block;
   height: 100%;
   background-color: var(--second-header-color);
   position: relative;
 }
-div.about-section div.more-info div.container div.skill span.box-level span::before{
-  content:'';
-  height:0;
-  width:0px;
-  border:10px solid ;
+div.about-section
+  div.more-info
+  div.container
+  div.skill
+  span.box-level
+  span::before {
+  content: "";
+  height: 0;
+  width: 0px;
+  border: 10px solid;
   border-color: black transparent transparent transparent;
   position: absolute;
-  top:calc(-100% + 18px );
-  left:calc(100% - 8px );
+  top: calc(-100% + 18px);
+  left: calc(100% - 8px);
 }
-div.about-section div.more-info div.container div.skill span.box-level span::after{
-  height:fit-content;
-  width:35px;
-  padding:1px;
+div.about-section
+  div.more-info
+  div.container
+  div.skill
+  span.box-level
+  span::after {
+  height: fit-content;
+  width: 35px;
+  padding: 1px;
   background-color: black;
   color: white;
   position: absolute;
-  top:-100% ;
-  left:calc(100% - 16px);
+  top: -100%;
+  left: calc(100% - 16px);
   border-radius: 5px;
 }
- div.about-section div.more-info div.container div.skill:first-child span.box-level span{
-  width:90%;
+div.about-section
+  div.more-info
+  div.container
+  div.skill:first-child
+  span.box-level
+  span {
+  width: 90%;
 }
-div.about-section div.more-info div.container div.skill:first-child span.box-level span::after{
-  content:'90%'
+div.about-section
+  div.more-info
+  div.container
+  div.skill:first-child
+  span.box-level
+  span::after {
+  content: "90%";
 }
-div.about-section div.more-info div.container div.skill:nth-child(2) span.box-level span{
-  width:70%;
+div.about-section
+  div.more-info
+  div.container
+  div.skill:nth-child(2)
+  span.box-level
+  span {
+  width: 70%;
 }
-div.about-section div.more-info div.container div.skill:nth-child(2) span.box-level span::after{
-  content:'70%';
+div.about-section
+  div.more-info
+  div.container
+  div.skill:nth-child(2)
+  span.box-level
+  span::after {
+  content: "70%";
 }
-div.about-section div.more-info div.container div.skill:nth-child(3) span.box-level span{
-  width:95%;
+div.about-section
+  div.more-info
+  div.container
+  div.skill:nth-child(3)
+  span.box-level
+  span {
+  width: 95%;
 }
-div.about-section div.more-info div.container div.skill:nth-child(3) span.box-level span::after{
-  content:'95%';
+div.about-section
+  div.more-info
+  div.container
+  div.skill:nth-child(3)
+  span.box-level
+  span::after {
+  content: "95%";
 }
-div.about-section div.more-info div.container div.skill:last-child span.box-level span{
-  width:80%;
-} 
-div.about-section div.more-info div.container div.skill:last-child span.box-level span::after{
-  content:'80%';
+div.about-section
+  div.more-info
+  div.container
+  div.skill:last-child
+  span.box-level
+  span {
+  width: 80%;
+}
+div.about-section
+  div.more-info
+  div.container
+  div.skill:last-child
+  span.box-level
+  span::after {
+  content: "80%";
 }
 /*qutoe*/
-div.about-section div.quote{
-  background:url('../images/quote.jpg');
+div.about-section div.quote {
+  background: url("../images/quote.jpg");
   background-size: cover;
   padding: var(--main-padding) 0;
   text-align: center;
- position:relative;
- color:white;
+  position: relative;
+  color: white;
 }
-div.about-section div.quote::before{
-  content:'';
+div.about-section div.quote::before {
+  content: "";
   height: 100%;
   width: 100%;
   background-color: var(--second-transparent);
-  position:absolute;
-  top:0px;
- left:0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
-div.about-section div.quote div.text{
-  margin:auto;
+div.about-section div.quote div.text {
+  margin: auto;
   width: 80%;
   position: relative;
   z-index: 2;
 }
 div.about-section div.quote div.text q {
- font-size: 30px;
- margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
+div.pricing-section div.offers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+div.pricing-section div.offers div.offer {
+  width: 250px;
+}
+div.pricing-section div.offers div.header {
+  border: 1px solid;
+  border-color: var(--second-header-color) transparent
+    var(--second-header-color) transparent;
+  padding: 40px 20px;
+}
+div.pricing-section div.offers div.offer h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+div.pricing-section div.offers div.offer span {
+  position: relative;
+  font-size: 60px;
+}
+div.pricing-section div.offers div.offer span::before {
+  content: "$";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  font-size: 25px;
+  font-weight: normal;
+}
+div.pricing-section div.offers div.offer span::after {
+  content: "/Mo";
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+  font-size: 20px;
+}
+div.pricing-section div.offers div.offer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--second-header-color);
+}
+div.pricing-section div.offers div.offer ul li {
+  padding: 20px;
+  color: var(--main-text-color);
+  position: relative;
+}
+div.pricing-section div.offers div.offer ul li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: var(--second-header-color);
+  top: 100%;
+  left: 20%;
+}
+div.pricing-section div.offers div.offer button {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid var(--second-header-color);
+  margin-top:30px;
+}
+div.pricing-section div.offers div.offer button:hover{
+  background-color: var(--second-header-color);
+  color:white;
+  cursor: pointer;
+}
+div.pricing-section div.bye{
+  text-align: center;
+}
+div.pricing-section div.bye p{
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+}
+
+
+
