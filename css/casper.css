@@ -68,6 +68,11 @@ div.special-header div.special-header-content {
   width: 50%;
   margin: auto;
 }
+@media(max-width:710px){
+  div.special-header div.special-header-content{
+    width: 100%;
+  }
+}
 div.special-header h1 {
   font-size: 40px;
   font-weight: normal;
@@ -170,23 +175,32 @@ div.landing {
   height: 100vh;
   background: url("../images/landing.jpg");
   background-size: cover;
+  position:relative;
 }
-div.calc {
+div.landing::before {
   background-color: var(--second-transparent);
-  height: 100vh;
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
 }
 div.landing div.landing-content {
   width: 50%;
   background-color: var(--transparent-color);
   padding: 50px;
-  position: relative;
+  position: absolute;
   top: 20%;
   display: flex;
   justify-content: flex-end;
 }
+@media(max-width:1090px){
+  div.landing div.landing-content{
+    max-height: calc( 100vh - 60px);
+    top: 60px;
+  }
+}
 @media(max-width:570px){
   div.landing div.landing-content{
-    width:100%;
   }
 }
 div.landing div.landing-content div.landing-text-content {
@@ -207,20 +221,26 @@ div.landing div.landing-content div.landing-text-content p {
 }
 /*ends*/
 div.landing div.slide {
-  top: 38%;
+  top: 80%;
 }
 /*Services Section*/
 div.services-section div.container {
-  padding: var(--main-padding) 0;
+  padding: var(--main-padding) 16px;
 }
 div.services-section div.container div.services-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 60px 40px;
 }
+@media(max-width:800px){
+  div.services-section div.container div.services-content{
+    grid-template-columns: 1fr;
+  }
+}
 div.services-section div.container div.services-content div.card {
   display: flex;
   justify-content: space-between;
+  padding
 }
 div.services-section div.container div.services-content div.card i {
   margin-right: 50px;
@@ -271,6 +291,14 @@ div.services-section div.design div.design-text-content {
   width: 50%;
   position: relative;
   z-index: 2;
+}
+@media(max-width:900px){
+  div.services-section div.design div.design-text-content{
+    width:100%;
+  }
+  div.services-section div.design div.design-image{
+    display: none;
+  }
 }
 div.services-section div.design div.design-text-content h2 {
   font-weight: normal;
@@ -764,11 +792,13 @@ div.pricing-section div.subscribe::before{
 }
 div.pricing-section div.subscribe div.container{
   display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 div.pricing-section div.subscribe div.sub-submit{
+  flex-basis: 45%;
 display: flex;
 align-items: center;
-margin-right:50px;
 position: relative;}
 div.pricing-section div.subscribe div.sub-submit i{
   position:absolute;
@@ -783,7 +813,7 @@ div.pricing-section div.subscribe div.sub-submit .sub-input{
 border:1px solid white;
 outline:none;
 height: 60px;
-width:300px;
+width:100%;
 background-color: transparent;
 }
 div.pricing-section ::placeholder{
@@ -798,14 +828,122 @@ div.pricing-section  div.sub-submit button{
   height: 61px;
   margin: 0;
 }
+
 div.pricing-section div.subscribe p{
+  flex-basis:50%;
   color:white;
   position: relative;
   z-index:2;
   line-height: 2;
   margin:0;
 }
+@media(max-width:992px){
+  div.pricing-section div.subscribe div.sub-submit,div.pricing-section div.subscribe p{
+    flex-basis: 100%;
+ }
+}
+/*Contact us*/
+div.contact-us-content{
+  display: flex;
+  justify-content: space-between;
+  grid-column: 20px;
 
+}
+div.contact-us-content form{
+  width:70%;
+}
+div.contact-us-content form>input ,textarea{
+  padding:20px;
+  border: 1px solid var(--main-text-color);
+  outline:none;
+  width:100%;
+  margin:0 0 30px 0;
+}
+div.contact-us-content form> textarea{
+  padding:20px;
+  border: 1px solid var(--main-text-color);
+  outline:none;
+  width:100%;
+  margin:0 0 30px 0;
+}
+div.contact-us-content form>input::placeholder{
+  text-transform: capitalize;
+  color: var(--main-text-color);
+}
+div.contact-us-content form button{
+  margin-right:0;
+}
+div.contact-us-content div.info{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+}
+div.contact-us-content div.info h4{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top:0px;
+}
+div.contact-us-content div.info span{
+  display: block;
+  margin-bottom: 10px;
+  color:var(--main-text-color);
 
+}
+div.contact-us-content div.info address{
+  line-height: 2;
+  color:var(--main-text-color);
 
-
+}
+footer{
+  background: url('../images/subscribe.jpg');
+  background-size: cover;
+  position: relative;
+}
+footer::before{
+content:'';
+width:100%;
+height:100%;
+background-color: var(--second-transparent);
+position: absolute;
+top: 0;
+left:0;
+}
+footer div.container{
+  position:relative;
+  padding:calc(var(--main-padding) / 2 ) 0;
+  text-align: center;
+}
+footer div.container p:not(:last-child){
+  font-size:22px;
+  text-transform: uppercase;
+  padding:20px;
+  border-bottom:1px solid white ;
+  margin:20px auto ;
+  width: fit-content;
+}
+footer div.container .social-icons{
+  color:white;
+  padding: 10px 15px;
+  width:fit-content;
+  margin:auto;
+}
+footer div.container .social-icons i{
+  margin:auto 15px;
+  cursor: pointer;
+}
+footer div.container .social-icons i:hover{
+  color:var(--second-header-color)
+}
+footer p{
+  color:white;
+  margin-bottom: 0;
+}
+footer div.container p:last-child{
+  margin-top:60px ;
+}
+footer div.container p:last-child span{
+  color:var(--second-header-color);
+  font-weight: bold;
+}
